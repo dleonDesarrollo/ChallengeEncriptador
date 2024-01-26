@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="column" id="column1">
+            <div class="row" id="c1-row1">
+                <img src="resources/Logo-1.png" alt="Logo">
+            </div>
+            <div class="row" id="c1-row2">
+                <textarea id="inputText" placeholder=""></textarea>
+                <div class="row" id="c1-row3">
+                    <img src="resources/bi_exclamation-circle-fill.png" alt="Muñecoerror">
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div class="row" id="c1-row4"> <!-- Asegúrate de que estos botones estén en la misma fila -->
+                    <button id="encryptButton">Encriptar</button>
+                    <button id="decryptButton">Desencriptar</button>
+                </div>
+            </div>
+        </div>
+        <div class="column" id="column2">
+            <div class="row" id="c2-row1">
+                <textarea id="outputText" placeholder="Texto traducido"></textarea>
+            </div>
+            <div class="row" id="c2-row2">
+                <button id="copyButton">Copiar</button>
+            </div>
+            <div class="row" id="c2-row3">
+                <img src="resources/Muñeco.png" alt="Muñecoerror">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p>Ingrese el texto que desee encriptar o desencriptar</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
