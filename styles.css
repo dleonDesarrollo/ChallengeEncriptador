@@ -1,0 +1,163 @@
+/* Estilos generales del cuerpo del documento */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+    'Open Sans', 'Helvetica Neue', sans-serif; /* Fuente del cuerpo del documento */
+    margin: 0; /* Elimina el margen exterior */
+    padding: 0; /* Elimina el relleno */
+    background: var(--Light-blue-light-blue-100, #F3F5FC); /* Color de fondo */
+}
+
+/* Estilos para textarea */
+textarea {
+    width: 100%; /* Ancho completo */
+    height: 300px; /* Altura fija */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
+    resize: none; /* No redimensionable */
+}
+
+/* Estilos para botones */
+button {
+    display: flex; /* Muestra como flex */
+    width: 328px; /* Ancho fijo */
+    padding: 24px; /* Relleno */
+    align-items: flex-start; /* Alinea los elementos a la parte superior */
+    gap: 8px; /* Espacio entre elementos */
+    flex-shrink: 0; /* No se ajusta al reducir */
+    border-radius: 24px; /* Borde redondeado */
+    font-size: 16px; /* Tamaño de fuente */
+    justify-content: center; /* Centra horizontalmente */
+    transition: transform 0.3s ease; /* Transición suave al transformar */
+}
+
+/* Contenedor principal */
+.container {
+    display: flex; /* Muestra como flex */
+    justify-content: space-between; /* Distribuye el espacio entre elementos */
+    align-items: flex-start; /* Alinea los elementos a la parte superior */
+    width: 80%; /* Ancho */
+    margin: auto; /* Margen automático */
+    margin-top: 50px; /* Margen superior */
+}
+
+/* Columnas */
+.column {
+    width: 45%; /* Ancho */
+    padding: 20px; /* Relleno */
+}
+
+/* Filas */
+.row {
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Estilos específicos para la columna 1 */
+#column1 {
+    width: 700px; /* Ancho */
+    height: 600px; /* Altura */
+    top: 40px; /* Posicionamiento superior */
+    border-radius: 32px; /* Borde redondeado */
+}
+
+/* Estilos específicos para la columna 2 */
+#column2 {
+    padding: 32px; /* Relleno */
+    width: 330px; /* Ancho */
+    height: 600px; /* Altura */
+    top: 40px; /* Posicionamiento superior */
+    left: 1000px; /* Posicionamiento izquierdo */
+    border-radius: 32px; /* Borde redondeado */
+    background-color: #FFFFFF; /* Color de fondo */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para la fila 2 de la columna 1 */
+#c1-row2 {
+    margin-left: 70px; /* Margen izquierdo */
+    width: 600px; /* Ancho */
+}
+
+/* Estilos para la fila 3 de la columna 1 y columna 2 */
+#c1-row3,
+#c2-row3 {
+    display: flex; /* Muestra como flex */
+    align-items: center; /* Alinea los elementos al centro */
+    gap: 10px; /* Espacio entre elementos */
+}
+
+/* Estilos específicos para la fila 3 de la columna 2 */
+#c2-row3 {
+    display: none; /* Oculto inicialmente */
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Alinea los elementos al centro */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+/* Estilos para el textarea de entrada */
+#inputText {
+    height: 400px; /* Altura */
+    font-size: 32px; /* Tamaño de fuente */
+    font-weight: 400; /* Grosor de fuente */
+    line-height: 48px; /* Altura de línea */
+    letter-spacing: 0em; /* Espaciado de letras */
+    text-align: left; /* Alineación de texto */
+    background-color: transparent; /* Color de fondo transparente */
+    color: var(--Dark-blue-dark-blue-300, #0A3871); /* Color de texto */
+}
+
+/* Estilos para el placeholder del textarea de entrada */
+#inputText::placeholder {
+    color: #0A3871; /* Color del placeholder */
+}
+
+/* Estilos para el textarea de salida */
+#outputText {
+    height: 512px; /* Altura */
+    font-size: 24px; /* Tamaño de fuente */
+    font-weight: 400; /* Grosor de fuente */
+    line-height: 36px; /* Altura de línea */
+    letter-spacing: 0em; /* Espaciado de letras */
+    text-align: left; /* Alineación de texto */
+    color: var(--Gray-gray-400, #495057); /* Color de texto */
+    font-style: normal; /* Estilo de fuente */
+    line-height: 150%; /* Altura de línea */
+}
+
+/* Estilos para el botón de encriptar */
+#encryptButton {
+    border: #0A3871; /* Borde */
+    background-color: #0A3871; /* Color de fondo */
+    color: #FFFFFF; /* Color de texto */
+}
+
+/* Estilos para la fila 4 de la columna 1 */
+#c1-row4 {
+    display: flex; /* Muestra como flex */
+    gap: 16px; /* Espacio entre elementos */
+}
+
+/* Estilos para los botones de desencriptar y copiar */
+#decryptButton,
+#copyButton {
+    background-color: transparent; /* Color de fondo transparente */
+    color: #0A3871; /* Color de texto */
+    border: 2px solid #0A3871; /* Borde */
+}
+
+/* Estilos de hover para el botón de encriptar */
+#encryptButton:hover {
+    background-color: #0C4A89; /* Color de fondo al hacer hover */
+    border: #0C4A89; /* Borde al hacer hover */
+    color: #FFFFFF; /* Color de texto al hacer hover */
+    transform: scale(1.03); /* Escala al hacer hover */
+}
+
+/* Estilos de hover para los otros botones */
+#decryptButton:hover,
+#copyButton:hover {
+    background-color: #868E96; /* Color de fondo al hacer hover */
+    border: #868E96; /* Borde al hacer hover */
+    color: #FFFFFF; /* Color de texto al hacer hover */
+    transform: scale(1.03); /* Escala al hacer hover */
+}
