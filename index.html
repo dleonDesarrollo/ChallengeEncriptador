@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+        <div class="column" id="column1">
+            <div class="row" id="c1-row1">
+                <img src="resources/Logo-1.png" alt="Logo">
+            </div>
+            <div class="container-2">
+                <div class="row" id="c1-row2">
+                    <textarea id="inputText" placeholder=""></textarea>
+                </div>
+                <div class="row" id="c1-row3">
+                    <img src="resources/bi_exclamation-circle-fill.png" alt="Muñecoerror">
+                    <p>Tu resultado es otorgado en minusculas y sin acentos</p>
+                </div>
+                <div class="row" id="c1-row4"> 
+                    <button id="encryptButton">Encriptar</button>
+                    <button id="decryptButton">Desencriptar</button>
+                </div>
+            </div>
+        </div>
+        <div class="column" id="column2">
+            <div class="container-3">
+                <div class="row" id="c2-row1">
+                    <button id="btnTranslate">
+                        <img src="resources/arrows.png" alt="arrows">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="column" id="column3">
+            <div class="container-4">
+<!--                 <div class="row" id="c3-row1">
+                    <div class="icon-container">
+                        <i class="bi bi-clipboard" id="iconCopiar" onclick="copyButton()"></i>
+                      </div>
+                    <textarea id="outputText" placeholder="Texto traducido"></textarea>
+                </div> -->
+                <div class="row" id="c3-row2">
+                    <button id="copyButton" onclick="copyButton()">Copiar</button>
+                </div>
+                <div class="row" id="c3-row3">
+                    <img src="resources/Muñeco.png" alt="Muñecoerror">
+                    <h1>Ningún mensaje fue encontrado</h1>
+                    <h3>Ingrese el texto que desee encriptar o desencriptar</h3>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2024 Desarrollador - Diego Saavedra</p>
+                <ul>
+                    <li><a href="https://github.com/dleonDesarrollo/ChallengeEncriptador"><i class="fab fa-github"></i></a> dleonDesarrollo</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <br>
+
+    <script src="script.js"></script>
+</body>
+</html>
