@@ -1,0 +1,352 @@
+:root {
+    /* Variables para colores Dark blue*/
+    --dark-blue-1: #609ED4;
+    --dark-blue-2: #356EA9;
+    --dark-blue-3: #0A3871;
+    --dark-blue-4: #072B61;
+    --dark-blue-5: #052051;
+
+    /* Variables para colores Light blue */
+    --light-blue-1: #F3F5FC;
+    --light-blue-2: #EFF1FA;
+    --light-blue-3: #E9ECF8;
+    --light-blue-4: #AAB2D5;
+    --light-blue-5: #757FB2;
+
+    /* Variables para colores Gray */
+    --gray-1: #CED4DA;
+    --gray-2: #ADB5BD;
+    --gray-3: #868E96;
+    --gray-4: #495057;
+    --gray-5: #343A40;
+}
+
+body{
+    background-color: var(--light-blue-1);/*Establecer color de fondo*/
+    font-family: 'Segoe UI',  sans-serif, Tahoma, Geneva, Verdana;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
+    resize: none; /* No redimensionable */
+}
+
+/* Estilos base */
+.container {
+    width: 1540px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    background-color: transparent;
+    padding: auto;
+    justify-content: center;
+    display: flex;
+    /* Permite que los elementos flexibles se envuelvan
+     a una nueva línea si no caben en la línea actual */
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+}
+
+.container-2{
+    width: 680px;
+    margin-left: 200px;
+    margin-top: 68px;
+}
+
+.container-4{
+    height: 100%;
+    width: 100%;
+    margin-top: 15px;
+/*     margin-left: auto;
+    margin-right: auto; */
+}
+.icon-container{
+    display: none;
+}
+.container-4 img{
+    margin-top: 200px;
+}
+
+.container-4 h1{
+    font-size: 24px;
+    text-align: center; /* Alinear el texto horizontalmente dentro del párrafo */
+    margin-top: 1em;
+    font-weight: bold; /* Aplica negrita al texto del h1 */
+    width: 300px;
+    
+}
+
+.container-4 h3{
+    font-size: 16px;
+    margin-top: 1em;
+    line-height: 1.6; /* Espacio de interlineado (ajusta según sea necesario) */
+    font-weight: normal; /* Quita el estilo de negrita */
+}
+
+#column1, #column2{
+    width: auto;
+    height: 800px;
+}
+
+#column2 {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+#column3{
+    margin: 0;/* Eliminar margen y relleno innecesario */
+    margin-right: 10%;
+    padding: 0;/* Ajustar el ancho del contenedor automáticamente */
+    width: auto;
+    height: 800px;
+    background-color: #FFFFFF;
+    border-radius: 32px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombreado al borde */
+}
+
+#c1-row3 {
+    margin-bottom: 10px;
+}
+
+
+#c3-row1, #c3-row2, #c3-row3 {
+    width: 400px;
+    display: none; /* Oculto inicialmente */
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Alinea los elementos al centro */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+#c3-row2{
+    margin-top: 8%;
+}
+
+#inputText{
+    font-size: 32px;
+    background-color: transparent;
+    color: var(--dark-blue-3);
+    width: 100%;
+    height: 500px;
+}
+
+/* Estilos para el placeholder del textarea de entrada */
+#inputText::placeholder {
+    color: #0A3871; /* Color del placeholder */
+}
+
+
+#outputText{
+    background-color: transparent;
+    width: 90%;
+    height: 600px;
+    font-size: 24px;
+    color: var(--gray-3);
+}
+
+/* Estilos para el botón de encriptar */
+#encryptButton {
+    margin-right: 10px;
+    border: var(--dark-blue-3); /* Borde */
+    background-color: var(--dark-blue-3); /* Color de fondo */
+    color: #FFFFFF; /* Color de texto */
+    border: 2px solid var(--dark-blue-3); /* Borde */
+}
+
+#encryptButton, #decryptButton{
+    width: 328px; /* Ancho fijo */
+} 
+
+#copyButton {
+    width: 336px;
+}
+
+/* Estilos para botones */
+#decryptButton, #copyButton, #encryptButton{
+    padding: 24px; /* Relleno */
+    flex-shrink: 0; /* No se ajusta al reducir */
+    border-radius: 24px; /* Borde redondeado */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: transform 0.3s ease; /* Transición suave al transformar */
+}
+
+/* Estilos para los botones de desencriptar y copiar */
+#decryptButton,
+#copyButton {
+    background-color: transparent; /* Color de fondo transparente */
+    color: var(--dark-blue-3); /* Color de texto */
+    border: 2px solid var(--dark-blue-3); /* Borde */
+}
+
+/* Estilos de hover para el botón de encriptar */
+#encryptButton:hover {
+    background-color: var(--dark-blue-2); /* Color de fondo al hacer hover */
+    border: 2px solid var(--dark-blue-2); /* Borde */ /* Borde al hacer hover */
+    color: #FFFFFF; /* Color de texto al hacer hover */
+    transform: scale(1.03); /* Escala al hacer hover */
+}
+
+/* Estilos de hover para los otros botones */
+#decryptButton:hover,
+#copyButton:hover {
+    background-color: #868E96; /* Color de fondo al hacer hover */
+    border: #868E96; /* Borde al hacer hover */
+    color: #FFFFFF; /* Color de texto al hacer hover */
+    transform: scale(1.03); /* Escala al hacer hover */
+}
+
+#c1-row3 img,p {
+    width: auto;
+    display: inline-block; /* Hace que los elementos se muestren en línea */
+}
+
+
+
+#btnTranslate {
+    background: none; /* Elimina el fondo del botón para que solo se muestre la imagen */
+    border: none; /* Elimina el borde del botón */
+    padding: 0; /* Elimina el espacio interior del botón */
+}
+
+#btnTranslate img {
+    z-index: 1; /* Asegura que la imagen esté encima del botón */
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    max-width: 100%; /* Asegura que la imagen no sea más grande que su contenedor */
+    max-height: 100%; /* Asegura que la imagen no sea más alta que su contenedor */
+    transition: transform 0.3s ease; /* Agrega una transición suave al cambio de tamaño */
+    filter: grayscale(100%); /* Convierte la imagen a escala de grises al pasar el cursor sobre ella */
+}
+
+#btnTranslate:hover img {
+    transform: scale(1.1); /* Hace que la imagen se agrande al pasar el cursor sobre ella */
+    filter: grayscale(50%); /* Convierte la imagen a escala de grises al pasar el cursor sobre ella */
+}
+
+footer{
+    margin-top: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+}
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%; /* Hace que el contenedor ocupe todo el ancho disponible */
+        height: auto;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: flex-start; /* Alinea los elementos al inicio */
+    }
+    .container-2{
+        width: 100%;
+        margin-top: 60px;
+        margin-left: 20px;
+        margin-right: 0px;
+    }
+
+    .container-4{
+        width: 100%;
+    }
+/*     .icon-container {
+        display:inline;
+        width: 300px;
+        height: 20px;
+        background-color: #052051;
+    }
+ */
+    .container-4 h1{
+        width: auto;
+        
+    }
+    
+    #column1{
+        height: auto;
+    }
+    
+    #column2, #c3-row3 img {
+        display: none;
+    }
+
+    #column3{
+        margin: 0;/* Eliminar margen y relleno innecesario */
+        margin-top: 4ex;
+        margin-left: 10px;
+        margin-right: 10px;
+        flex-basis: 100%;
+        height: 200px;
+    }
+
+    #c1-row4{
+        margin-right: 10px;
+    }
+
+    #c3-row1, #c3-row2, #c3-row3 {
+        width: 374px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #inputText{
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        height: 380px;
+        box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */    
+    }
+
+    #outputText{
+        /* Ajustar el tamaño del textarea para que coincida con el contenedor */
+        flex: 1;
+        width: 100%;
+        height: auto;
+    }
+    #encryptButton{
+        margin-right: auto;
+    } 
+    #encryptButton, #decryptButton{
+        width: calc(50% - 10px); 
+    } 
+
+    #copyButton{
+        display: none;
+    }
+    
+}
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 375px) {
+    .container {
+        width: auto; /* Hace que el contenedor ocupe todo el ancho disponible */
+        height: auto;
+        margin-top: 20px;
+        justify-content: flex-start; /* Alinea los elementos al inicio */
+    }
+    .container-4{
+        margin-left: 10px;
+        margin-right: auto;
+    }
+
+    #encryptButton, #decryptButton {
+        width: 340px; /* Ancho fijo */  
+    }
+     
+    #decryptButton {
+        margin-top: 20px; /* Añadir un margen superior cuando baja de fila */
+    }
+
+    #c3-row3{
+        width: 345px; /* Ancho fijo */
+    }
+}
+
+
+
+
